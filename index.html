@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Assignment</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar-container">
+            <nav class="navbar">
+                <div class="nav-item nav-item-1">
+                    <div><h6>Where</h6>
+                    <p id="search-destination">Search destinations</p></div>
+                </div>
+                <div class="nav-item nav-item-2">
+                    <div>
+                        <h6>Check in</h6>
+                        <div class="check-in-plus-minus">
+                            <p id="check-in-date">Add dates</p>
+                            <p id="check-in-plus-minus"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item nav-item-3">
+                    <div>
+                        <h6>Check out</h6>
+                        <div class="check-out-plus-minus">
+                            <p id="check-out-date">Add dates</p>
+                            <p id="check-out-plus-minus"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item nav-item-4">
+                    <div>
+                        <h6>Who</h6>
+                        <p>Add guests</p>
+                    </div>
+                    <div class="nav-search">
+                        <img src="assets/icons/search-icon-white.png" alt="">
+                        <h5>Search</h5>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar ends here -->
+
+        <!-- Modals start here -->
+        <div class="modal modal-1">
+            <div class="modal-content">
+                <h5>Search by region</h5>
+                <div class="grid3x3">
+                    <div>
+                        <img src="assets/navbar-maps/world-map.png" alt="Image 1">
+                        <p>I'm flexible</p>
+                    </div>
+                    <div>
+                        <img src="assets/navbar-maps/south-east-asia-map.png" alt="Image 2">
+                        <p>Southeast Asia</p>
+                    </div>
+                    <div>
+                        <img src="assets/navbar-maps/canada-map.png" alt="Image 3">
+                        <p>Canada</p>
+                    </div>
+                    <div>
+                        <img src="assets/navbar-maps/europe-map.png" alt="Image 4">
+                        <p>Europre</p>
+                    </div>
+                    <div>
+                        <img src="assets/navbar-maps/thailand-map.png" alt="Image 5">
+                        <p>Thailand</p>
+                    </div>
+                    <div>
+                        <img src="assets/navbar-maps/middle-east-map.png" alt="Image 6">
+                        <p>Middle East</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal modal-2">
+            <div class="modal-content">
+                <div class="check-in-out-header-container">
+                    <div class="check-in-out-header">
+                        <div class="check-in-out-header-item check-in-out-header-item-1">
+                            <p>Dates</p>
+                        </div>
+                        <div class="check-in-out-header-item check-in-out-header-item-2">
+                            <p>Months</p>
+                        </div>
+                        <div class="check-in-out-header-item check-in-out-header-item-3">
+                            <p>Flexible</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="calendar1"></div>
+                <div class="plus-minus-footer-container">
+                    <p class="plus-minus-footer-item">Exact dates</p>
+                    <p class="plus-minus-footer-item">± 1 day</p>
+                    <p class="plus-minus-footer-item">± 2 days</p>
+                    <p class="plus-minus-footer-item">± 3 days</p>
+                    <p class="plus-minus-footer-item">± 7 days</p>
+                </div>
+            </div>
+        </div>
+        <div class="modal modal-3">
+            <div class="modal-content">
+                <div class="check-in-out-header-container">
+                    <div class="check-in-out-header">
+                        <div class="check-in-out-header-item check-in-out-header-item-1">
+                            <p>Dates</p>
+                        </div>
+                        <div class="check-in-out-header-item check-in-out-header-item-2">
+                            <p>Months</p>
+                        </div>
+                        <div class="check-in-out-header-item check-in-out-header-item-3">
+                            <p>Flexible</p>
+                        </div>
+                    </div>
+                </div>
+                <div id="calendar2"></div>
+                <div class="plus-minus-footer-container">
+                    <p class="plus-minus-footer-item">Exact dates</p>
+                    <p class="plus-minus-footer-item">± 1 day</p>
+                    <p class="plus-minus-footer-item">± 2 days</p>
+                    <p class="plus-minus-footer-item">± 3 days</p>
+                    <p class="plus-minus-footer-item">± 7 days</p>
+                </div>
+            </div>
+        </div>
+        <div class="modal modal-4">
+            <div class="modal-content">
+                <div class="who-container">
+                    <div class="who-item who-item-1">
+                        <div class="who-item-text who-item-text-1">
+                            <h6>Adults</h6>
+                            <p>Age 13 or above</p>
+                        </div>
+                        <div class="who-item-counter who-item-counter-1">
+                            <img src="assets/icons/minus-icon.png" alt="" class="minus-icon">
+                            <p>0</p>
+                            <img src="assets/icons/plus-icon.png" alt="" class="plus-icon">
+                        </div>
+                    </div>
+                    <div class="who-item who-item-2">
+                        <div class="who-item-text who-item-text-2">
+                            <h6>Children</h6>
+                            <p>Ages 2-12</p>
+                        </div>
+                        <div class="who-item-counter who-item-counter-2">
+                            <img src="assets/icons/minus-icon.png" alt="" class="minus-icon">
+                            <p>0</p>
+                            <img src="assets/icons/plus-icon.png" alt="" class="plus-icon">
+                        </div>
+                    </div>
+                    <div class="who-item who-item-3">
+                        <div class="who-item-text who-item-text-3">
+                            <h6>Infants</h6>
+                            <p>Under 2</p>
+                        </div>
+                        <div class="who-item-counter who-item-counter-3">
+                            <img src="assets/icons/minus-icon.png" alt="" class="minus-icon">
+                            <p>0</p>
+                            <img src="assets/icons/plus-icon.png" alt="" class="plus-icon">
+                        </div>
+                    </div>
+                    <div class="who-item who-item-4">
+                        <div class="who-item-text who-item-text-4">
+                            <h6>Pets</h6>
+                            <p>Bringing a serice animal?</p>
+                        </div>
+                        <div class="who-item-counter who-item-counter-4">
+                            <img src="assets/icons/minus-icon.png" alt="" class="minus-icon">
+                            <p>0</p>
+                            <img src="assets/icons/plus-icon.png" alt="" class="plus-icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modals end here -->
+
+        <div class="comfy-container">
+            <div class="comfy-left">
+                <h1>Comfy New Apt. in Pueblo Libre!</h1>
+            </div>
+            <div class="comfy-right">
+                <div class="comfy-right-item comfy-right-item-1">
+                    <img id="share" src="assets/icons/share-icon.png" alt="">
+                    <p>Share</p>
+                </div>
+                <div class="comfy-right-item comfy-right-item-2">
+                    <img id="heart-light-icon" src="assets/icons/heart-light-icon.svg" alt="">
+                    <img id="heart-solid-icon" src="assets/icons/heart-solid-icon.svg" alt="">
+                    <p>Save</p>
+                </div>
+            </div>
+        </div>
+        <div class="modal modal-5">
+            <div class="modal-content">
+                <button id="close-modal-5">&times; Close</button>
+                <h2>Share this place</h2>
+                <div class="share-this-place-banner">
+                    <img src="assets/bedoom-images/bedroom1.png" alt="">
+                    <h6>Rental unit in Lima • ★ New • 1bedroom • 1bed • 1bath</h6>
+                </div>
+                <div class="share-element-container">
+                    <div class="share-element share-element-1" id="shareElement">
+                        <img src="assets/icons/Share Modal Icons/copy-icon.svg" alt="">
+                        <p>Copy Link</p>
+                    </div>
+                    <div class="share-element share-element-2">
+                        <img src="assets/icons/Share Modal Icons/email-icon.svg" alt="">
+                        <p>Email</p>
+                    </div>
+                    <div class="share-element share-element-3">
+                        <img src="assets/icons/Share Modal Icons/messages-icon.svg" alt="">
+                        <p>Messages</p>
+                    </div>
+                    <div class="share-element share-element-4">
+                        <img src="assets/icons/Share Modal Icons/messenger-icon.svg" alt="">
+                        <p>Messenger</p>
+                    </div>
+                    <div class="share-element share-element-5">
+                        <img src="assets/icons/Share Modal Icons/instagram-icon.svg" alt="">
+                        <p>Instagram</p>
+                    </div>
+                    <div class="share-element share-element-6">
+                        <img src="assets/icons/Share Modal Icons/facebook-icon.svg" alt="">
+                        <p>Facebook</p>
+                    </div>
+                    <div class="share-element share-element-7">
+                        <img src="assets/icons/Share Modal Icons/twitter-icon.svg" alt="">
+                        <p>Twitter</p>
+                    </div>
+                    <div class="share-element share-element-8">
+                        <p>&lt;/&gt;&nbsp;</p>
+                        <p>Embed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Banner container starts here -->
+        <div class="banner-container">
+            <div class="round-left">
+                <img src="assets/bedoom-images/bedroom1.png" alt="Image 1">
+                <div class="nine-dots-btn nine-dots-btn-mobile">
+                    <img src="assets/icons/nine-dots-icon.png" alt="">
+                    <button class="image-button">Show all photos</button>
+                </div>
+            </div>
+            <div class="grid2x2">
+                <div>
+                    <img src="assets/bedoom-images/bedroom4.png" alt="Image 2">
+                    <img class="round-top-right" src="assets/bedoom-images/bedroom2.png" alt="Image 3">
+                </div>
+                <div>
+                    <img src="assets/bedoom-images/bedroom3.png" alt="Image 4">
+                    <div class="image-button-container">
+                        <img class="round-bottom-right" src="assets/bedoom-images/bedroom5.png" alt="Image 5">
+                        <div class="nine-dots-btn">
+                            <img src="assets/icons/nine-dots-icon.png" alt="">
+                            <button class="image-button">Show all photos</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- Banner container ends here -->
+        <!-- Fullscreen modal starts here -->
+        <!-- Full-screen modal -->
+        <div class="fullscreen-modal">
+            <div class="modal-content-fullscreen">
+                <button class="close-btn">&times; Close</button>
+                <div class="image-gallery">
+                    <button class="prev-btn">&#10094;</button>
+                    <img id="fullscreen-image" src="assets/bedoom-images/bedroom1.png" alt="Bedroom Image">
+                    <button class="next-btn">&#10095;</button>
+                </div>
+                <div class="image-counter">1/5</div>
+            </div>
+        </div>
+        <!-- Fullscreen modal ends here -->
+    </div>
+    <script src="scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</body>
+</html>
